@@ -1,4 +1,4 @@
-    //crearMensaje    ignorame 2
+    //crearMensaje    ignorame 23
     const ataquesDelEnemigo = document.getElementById("ataques-del-enemigo")
     const ataquesDelJugador = document.getElementById("ataques-del-jugador")
     //AMBAS
