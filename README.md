@@ -10,15 +10,4 @@ La tecnologia aplicada para su gameplay es de vanguardia (mentira, esta en desar
 pip install foobar
 ```
 
-```python
-import foobar
 
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
