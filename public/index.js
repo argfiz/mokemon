@@ -181,7 +181,8 @@
     function unirseAlJuego() {
 
         // Realiza una solicitud a la URL 'http://localhost:8080/unirse'.
-        fetch('http://192.168.0.98:8080/unirse')
+        
+        fetch('https://mokemon.vercel.app//unirse')
             //Promesa del Fitch qie recibe una funcion que es un callback que se va a ejecutar una vez se haya resuelto la respuesta del servidor (recibe como primer argumento esa respuesta "res")
             .then(function (res) {
                 if(res.ok) {
@@ -230,7 +231,8 @@
     
 
     function seleccionarMokemon(mascotaJugador) {
-        fetch(`http://192.168.0.98:8080/mokemon/${jugadorId}`, {
+        const serverUrl = process.env.SERVER_URL || 'http://localhost:8080'
+        fetch(`${serverUrl}/mokemon/${jugadorId}`, {
             method: "post",
             headers: {"Content-Type" : "application/json"},
             body : JSON.stringify({
