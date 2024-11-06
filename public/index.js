@@ -231,8 +231,8 @@
     
 
     function seleccionarMokemon(mascotaJugador) {
-        const serverUrl = process.env.SERVER_URL || 'http://localhost:8080'
-        fetch(`${serverUrl}/mokemon/${jugadorId}`, {
+       
+        fetch(`http://mokemon.vercel.app/mokemon/${jugadorId}`, {
             method: "post",
             headers: {"Content-Type" : "application/json"},
             body : JSON.stringify({
