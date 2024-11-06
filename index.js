@@ -7,6 +7,8 @@ const cors = require('cors')
 // Crea una instancia de la aplicación Express.
 const app = express() 
 
+const port = process.env.Port || 8080
+
 // Para hostear el html y lo pueda ver otra persona
 app.use(express.static(`public`))
 
@@ -115,7 +117,7 @@ app.get("/mokemon/:jugadorId/ataques", (req, res) => {
 
 
 // Hace que la aplicación escuche en el puerto 8080 y, cuando se inicia, muestra un mensaje en la consola.
-app.listen ( 8080, () => {
+app.listen ( port, () => {
   console.log("Servidor funcionando")   
 })
  
