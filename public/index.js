@@ -181,7 +181,7 @@
     function unirseAlJuego() {
 
         // Realiza una solicitud a la URL 'http://localhost:8080/unirse'.
-        fetch('mokemon.vercel.app/unirse')
+        fetch('http://192.168.0.108:8080/unirse')
             //Promesa del Fitch qie recibe una funcion que es un callback que se va a ejecutar una vez se haya resuelto la respuesta del servidor (recibe como primer argumento esa respuesta "res")
             .then(function (res) {
                 if(res.ok) {
@@ -230,7 +230,7 @@
     
 
     function seleccionarMokemon(mascotaJugador) {
-        fetch(`mokemon.vercel.app/mokemon/${jugadorId}`, {
+        fetch(`http://192.168.0.108:8080/mokemon/${jugadorId}`, {
             method: "post",
             headers: {"Content-Type" : "application/json"},
             body : JSON.stringify({
@@ -339,7 +339,7 @@
 
 
     function enviarAtaques () {
-        fetch(`mokemon.vercel.app/mokemon/${jugadorId}/ataques`, {
+        fetch(`http://192.168.0.108:8080/mokemon/${jugadorId}/ataques`, {
             method: "post",
             headers: {
                 "Content-Type" : "application/json"
@@ -354,7 +354,7 @@
 
 
     function obtenerAtaque() {
-        fetch(`mokemon.vercel.app/mokemon/${enemigoId}/ataques`)
+        fetch(`http://192.168.0.108:8080/mokemon/${enemigoId}/ataques`)
             .then(function(res) {
                 if(res.ok) {
                     res.json()
@@ -523,7 +523,7 @@
 
 
 function enviarPosicion (x, y) {
-    fetch(`mokemon.vercel.app/mokemon/${jugadorId}/posicion`, {
+    fetch(`http://192.168.0.108:8080/mokemon/${jugadorId}/posicion`, {
         method: "post",
         headers: {"Content-Type" : "application/json"},
         body: JSON.stringify({
