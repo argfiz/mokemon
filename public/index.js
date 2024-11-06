@@ -182,7 +182,7 @@
 
         // Realiza una solicitud a la URL 'http://localhost:8080/unirse'.
         
-        fetch('http://mokemon.vercel.app//unirse')
+        fetch('http://mokemon.vercel.app/unirse')
             //Promesa del Fitch qie recibe una funcion que es un callback que se va a ejecutar una vez se haya resuelto la respuesta del servidor (recibe como primer argumento esa respuesta "res")
             .then(function (res) {
                 if(res.ok) {
